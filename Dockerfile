@@ -9,6 +9,7 @@ RUN apt-get update -qq && apt-get install -qq \
     python3-pip 
 
 RUN pip install numpy
+
 RUN git clone --depth=1 https://github.com/openmopac/mopac.git
 
 WORKDIR /mopac/build
@@ -22,8 +23,12 @@ FROM ubuntu:22.04 AS install
 
 RUN apt-get update -qq && apt-get install -qq \
     gfortran \
-    libopenblas-dev && \
-    rm -rf /var/lib/apt/lists/*
+    libopenblas-dev \
+    python3 \
+    python3-pip \
+    openbabel 
+
+RUN pip install numpy pandas
 
 WORKDIR /mopac/build
 COPY --from=build /mopac/build/*mod /mopac/build/
@@ -44,12 +49,11 @@ if [ ! -d /workdir ]; then\n\
   exit 1\n\
 fi\n\
 \n\
-# Envoke mopac\n\
 cd /workdir\n\
-mopac "$@"\n'\
->> /home/mopac.sh && chmod +x /home/mopac.sh
+"$@"\n'\
+>> /home/entry.sh && chmod +x /home/entry.sh
 
-ENTRYPOINT ["/home/mopac.sh"]
+ENTRYPOINT ["/home/entry.sh"]
 
 
 
