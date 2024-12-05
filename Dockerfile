@@ -24,11 +24,11 @@ FROM ubuntu:22.04 AS install
 RUN apt-get update -qq && apt-get install -qq \
     gfortran \
     libopenblas-dev \
-    python3 \
+    python3.11 \
     python3-pip \
     openbabel 
 
-RUN pip install numpy pandas
+RUN pip install numpy pandas scikit-learn torch tqdm
 
 WORKDIR /mopac/build
 COPY --from=build /mopac/build/*mod /mopac/build/
