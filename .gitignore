@@ -4,3 +4,7 @@
 *.arc
 *.mop
 *.xyz
+*.csv
+*.molden
+*.init
+*__pycache__
