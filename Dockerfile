@@ -28,7 +28,7 @@ RUN apt-get update -qq && apt-get install -qq \
     python3-pip \
     openbabel 
 
-RUN pip install numpy pandas scikit-learn torch tqdm
+RUN pip install numpy pandas scikit-learn torch tqdm matplotlib torchvision torch_geometric networkx[default]
 
 WORKDIR /mopac/build
 COPY --from=build /mopac/build/*mod /mopac/build/
