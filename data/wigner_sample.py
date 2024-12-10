@@ -287,7 +287,7 @@ if __name__ == "__main__":
 
     elements, coords = utils.read_xyz(xyz)
     stem = ".".join(xyz.split(".")[:-1])
-    n = 100
+    n = 200
 
     wigner_structures = Sample(stem, n)
 
@@ -302,7 +302,9 @@ if __name__ == "__main__":
             for stretched in stretch_difluoroethane(rotated, 50):
                 all.append(stretched)
 
-    all = [all[i] for i in np.random.choice(list(range(len(all))), 1000)]
+    to_keep = int(min(10000, len(all)))
+    to_keep = 10
+    all = [all[i] for i in np.random.choice(list(range(len(all))), to_keep)]
 
     for idx, geom in enumerate(all):
         utils.write_xyz(elements, geom, f"sampled_structrue_{idx}.xyz")

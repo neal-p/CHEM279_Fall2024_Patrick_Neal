@@ -56,7 +56,7 @@ cp "../$xyz" ./
 
 MOPAC_OPT_KEYWORDS="MNDO XYZ NOREOR OPT PRECISE"
 MOPAC_FREQ_KEYWORDS="MNDO XYZ NOREOR LARGE DFORCE"
-MOPAC_GRAD_KEYWORDS="MNDO XYZ NOREOR"
+MOPAC_GRAD_KEYWORDS="MNDO XYZ NOREOR ENPART GNORM=100.0 GRADIENTS LET"
 
 ###########################################
 # Opt
@@ -113,6 +113,7 @@ for i in *sample*xyz
   echo "$MOPAC_GRAD_KEYWORDS" > $IND_INPUT
   echo " " >> $IND_INPUT
   echo " " >> $IND_INPUT
+  tail -n +3 $i >> $IND_INPUT
 
   docker run --rm -v "$(pwd)":/workdir $IMAGE mopac $IND_INPUT
 done
@@ -121,7 +122,9 @@ done
 # Parse
 #######
 
-docker run --rm -v "$(pwd)":/workdir $IMAGE python3 ../parser.py
+cp ../parse.py ./
+cp -r ../utils ./
+docker run --rm -v "$(pwd)":/workdir $IMAGE python3 parse.py
 
 #########################################
 # Done!

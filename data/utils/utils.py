@@ -223,7 +223,7 @@ def read_energy(file):
     if energy_section == SENTINEL:
         raise ValueError("Couldnt read energy")
 
-    return energy
+    return float(energy)
 
 
 def read_xyz(file):
