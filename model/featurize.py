@@ -57,11 +57,11 @@ def internal_coords(coords):
 
     feats = [
 
-            distance(C1, C2),
-            distance(C1, F1),
+            1 / distance(C1, C2),
+            1 / distance(C1, F1),
             angle(C2, C1, F1),
 
-            distance(C2, F2),
+            1 / distance(C2, F2),
             angle(C1, C2, F2),
 
             dihedral(F1, C1, C2, F2),
@@ -69,21 +69,20 @@ def internal_coords(coords):
             dihedral(H2, C1, C2, H4),
             dihedral(H1, C1, C2, H4),
 
-            distance(F1, F2),
+            1 / distance(F1, F2),
 
-            distance(C1, H1),
-            distance(C1, H2),
+            1 / distance(C1, H1),
+            1 / distance(C1, H2),
             angle(C2, C1, H1),
             angle(C2, C1, H2),
             angle(H1, C1, H2),
 
-            distance(C2, H3),
-            distance(C2, H4),
+            1 / distance(C2, H3),
+            1 / distance(C2, H4),
             angle(C1, C2, H3),
             angle(C1, C2, H4),
             angle(H3, C2, H4),
  
-
             ]
 
     return torch.tensor(feats).float()
@@ -101,7 +100,7 @@ class MolDataset(Dataset):
         for idx, row in df.iterrows():
 
             coords = row["coords"]
-            energy = row["energy"]
+            energy = row["normalized_energy"]
             grad = row["grad"]
 
             feats = internal_coords(coords)
@@ -121,11 +120,12 @@ class MolDataset(Dataset):
 
 ##########################################################
 
-def load_data(file, folds=5, batch_size=128):
+def load_data(file, folds=2, batch_size=128):
 
+    print("Reading df...", flush=True)
     df = pd.read_pickle(file)
 
-    print(df)
+    print(df, flush=True)
 
     # Normalize energies
     energy_scaler = StandardScaler()
@@ -134,22 +134,27 @@ def load_data(file, folds=5, batch_size=128):
     with open("energy_scaler.pkl", "wb") as pkl:
         pickle.dump(energy_scaler, pkl)
 
-    splitter = KFold(n_splits=folds, shuffle=True)
-    splits = splitter.split(df)
+    #splitter = KFold(n_splits=folds, shuffle=True)
+    #splits = splitter.split(df)
+    df = df.sample(frac=1).reset_index(drop=True)
+
+    train_indices = list(df.head(8500).index)
+    test_indices = list(df.tail(1000).index)
+    splits = [(train_indices, test_indices)]
 
     folds = []
     for fold, (train_indices, test_indices) in enumerate(splits):
 
-        print("Loading fold", fold, "...")
+        print("Loading fold", fold, "...", flush=True)
 
         fold_train_df = df.iloc[train_indices]
-        fold_test_df = df.iloc[train_indices]
+        fold_test_df = df.iloc[test_indices]
 
         train_ds = MolDataset(fold_train_df)
-        test_ds = MolDataset(fold_train_df)
+        test_ds = MolDataset(fold_test_df)
 
-        train_dl = DataLoader(train_ds)
-        test_dl = DataLoader(test_ds)
+        train_dl = DataLoader(train_ds, batch_size=batch_size, shuffle=True)
+        test_dl = DataLoader(test_ds, batch_size=batch_size, shuffle=True)
 
         folds.append((train_dl, test_dl))
 
