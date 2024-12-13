@@ -9,3 +9,9 @@ To compile the code on Datahub, enter the command `make all` under this director
 ```
 `<filename>`: The path to the input file containing information of the molecule.
 
+# MD Simulation Compilation
+
+g++ -o md_simulation_cndo md_simulation_cndo.cpp AO.cpp CNDO.cpp util.cpp -larmadillo -std=c++11
+./md_simulation_cndo
+
+
