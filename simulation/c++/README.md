@@ -12,6 +12,6 @@ To compile the code on Datahub, enter the command `make all` under this director
 # MD Simulation Compilation
 
 g++ -o md_simulation_cndo md_simulation_cndo.cpp AO.cpp CNDO.cpp util.cpp -larmadillo -std=c++11
-./md_simulation_cndo
+./md_simulation_cndo H2O.txt 1000
 
 
