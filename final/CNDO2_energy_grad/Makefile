@@ -20,13 +20,13 @@ SRCS = main.cpp CNDO.cpp util.cpp AO.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 # Executable name
-MAIN = HW5
+MAIN = energy_and_grad
 
 # Targets
 .PHONY: depend clean
 
 all:    $(MAIN)
-	@echo  Simple compiler named HW5 has been compiled
+	@echo  Simple compiler named energy_and_grad has been compiled
 
 $(MAIN): $(OBJS) 
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -o $(MAIN) $(OBJS) $(LFLAGS) $(LIBS)

@@ -119,11 +119,14 @@ echo "#####################"
 echo "# Energy/Grad evals #"
 echo "#####################"
 
+# build
+cd ../CNDO2_energy_grad && make && cd -
+
 for i in *sample*xyz
   do IND_NAME="${i%.*}"
-  IND_OUTPUT="${IND_NAME}.out"
 
-  ../CNDO2_energy_grad/energy_and_grad $i ../CNDO2/basis_set/ > $IND_OUTPUT
+  IND_OUTPUT="${IND_NAME}.out"
+  ../CNDO2_energy_grad/energy_and_grad $i ../CNDO2_energy_grad/basis_set/ > $IND_OUTPUT
 
 done
 
