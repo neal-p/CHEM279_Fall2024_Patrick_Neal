@@ -9,3 +9,6 @@
 *.init
 *__pycache__
 *.velocity
+*.o
+*.a
+
