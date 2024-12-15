@@ -1,0 +1,29 @@
+Read in the following:
+Simulation: 
+    n_atoms=1, charge=-1, n_AOs= 1, n_e-=2, n_valence_e=2
+    1       0.00000   0.00000   0.00000
+
+Overlap Matrix S:
+1.00000
+
+Huckel Hamiltonian Matrix H:
+-13.60000
+
+Matrix X:
+1.00000
+
+Check orthogonalizatoin X^t * S * X:
+1.00000
+    is identity check: 1
+
+Matrix V: 
+1.00000
+
+Matrix C: 
+1.00000
+
+Orbital energies Vector E:
+-13.60000
+
+TOTAL ENERGY: 
+-27.20000

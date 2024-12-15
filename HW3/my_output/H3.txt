@@ -1,0 +1,8 @@
+Read in the following:
+Simulation: 
+    n_atoms=3, charge=0, n_AOs= 3, n_e-=3, n_valence_e=3
+    1       0.00000   0.00000   0.00000
+    1       1.39840   0.00000   0.00000
+    1      -1.39840   0.00000   0.00000
+
+Simulation must have EVEN number of electrons!! Exiting...

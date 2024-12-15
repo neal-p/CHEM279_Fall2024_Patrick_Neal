@@ -1,0 +1,49 @@
+Nuclear Repulsion Energy=19.4587
+Electron Energy=-60.0338
+Total Energy=-40.5751
+
+Suv_RA
+        0  0.346262 -0.346262         0
+        0         0         0         0
+        0         0         0         0
+
+coef Xuv
+-18 -18
+-18 -18
+
+
+gradient (gamma part)
+       0  5.41613 -5.41613        0
+       0        0        0        0
+       0        0        0        0
+
+Yab
+-1.5 -1.5
+-1.5 -1.5
+
+e term 1
+-6.23272  6.23272
+       0        0
+       0        0
+
+e term 2
+-8.12419  8.12419
+       0        0
+       0        0
+
+e grad total
+-14.3569  14.3569
+       0        0
+       0        0
+
+
+gradient (Nuclear part)
+ 13.915 -13.915
+      0       0
+      0       0
+
+TOTAL GRAD
+-0.441958  0.441958
+        0         0
+        0         0
+

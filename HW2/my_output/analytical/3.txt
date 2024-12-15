@@ -1,0 +1,30 @@
+Shell:
+  alpha=1
+  xyz=0 0 0
+  L=2
+  Composed of: 
+        lmn: 2 0 0
+        lmn: 1 1 0
+        lmn: 1 0 1
+        lmn: 0 2 0
+        lmn: 0 1 1
+        lmn: 0 0 2
+
+
+Shell:
+  alpha=0.5
+  xyz=1 1 0
+  L=1
+  Composed of: 
+        lmn: 1 0 0
+        lmn: 0 1 0
+        lmn: 0 0 1
+
+
+Overlap matrix:
+-0.115272 -0.461089         0
+0.0576361 0.0576361         0
+        0        -0  0.172908
+-0.461089 -0.115272         0
+       -0         0  0.172908
+-0.345817 -0.345817         0

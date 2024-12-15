@@ -1,0 +1,957 @@
+Input:
+3 atoms
+79      0.00000   0.00000   0.00000
+79    -25.00000   0.00000   0.00000
+79      0.00000   0.00000  25.00000
+
+Initial Energy: -0.00006
+Initial Gradient:
+-0.00001  0.00001 -0.00000
+-0.00000 -0.00000 -0.00000
+ 0.00001  0.00000 -0.00001
+Optimization Step: 0
+Updated Coordiantes:
+3 atoms
+79     -6.62913   0.00000   6.62913
+79    -17.95655   0.00000   0.41432
+79     -0.41432   0.00000  17.95655
+
+Updated Energy: -0.00303
+Optimization Step: 1
+Updated Coordiantes:
+3 atoms
+79     -9.07209   0.00000   9.07209
+79    -12.49859   0.00000   3.42932
+79     -3.42932   0.00000  12.49859
+
+Updated Energy: -0.16971
+Optimization Step: 2
+Updated Coordiantes:
+3 atoms
+79     -7.95212   0.00000   7.95212
+79    -10.74429   0.00000   6.30360
+79     -6.30360   0.00000  10.74429
+
+Updated Energy: -8.72101
+Optimization Step: 3
+Updated Coordiantes:
+3 atoms
+79     -8.04382   0.00000   8.04382
+79    -10.51628   0.00000   6.43990
+79     -6.43990   0.00000  10.51628
+
+Updated Energy: -10.76798
+Optimization Step: 4
+Updated Coordiantes:
+3 atoms
+79     -7.84148   0.00000   7.84148
+79    -10.54105   0.00000   6.61746
+79     -6.61746   0.00000  10.54105
+
+Updated Energy: -10.80940
+Optimization Step: 5
+Updated Coordiantes:
+3 atoms
+79     -7.84682   0.00000   7.84682
+79    -10.52778   0.00000   6.62540
+79     -6.62540   0.00000  10.52778
+
+Updated Energy: -10.82334
+Optimization Step: 6
+Updated Coordiantes:
+3 atoms
+79     -7.79188   0.00000   7.79189
+79    -10.53451   0.00000   6.67360
+79     -6.67360   0.00000  10.53451
+
+Updated Energy: -10.83538
+Optimization Step: 7
+Updated Coordiantes:
+3 atoms
+79     -7.79666   0.00000   7.79665
+79    -10.52267   0.00000   6.68068
+79     -6.68068   0.00000  10.52267
+
+Updated Energy: -10.84679
+Optimization Step: 8
+Updated Coordiantes:
+3 atoms
+79     -7.75402   0.00000   7.75445
+79    -10.52802   0.00000   6.71784
+79     -6.71796   0.00000  10.52771
+
+Updated Energy: -10.85749
+Optimization Step: 9
+Updated Coordiantes:
+3 atoms
+79     -7.75903   0.00000   7.75860
+79    -10.51631   0.00000   6.72477
+79     -6.72466   0.00000  10.51663
+
+Updated Energy: -10.86828
+Optimization Step: 10
+Updated Coordiantes:
+3 atoms
+79     -7.73172   0.00000   7.73938
+79    -10.52195   0.00000   6.74423
+79     -6.74632   0.00000  10.51639
+
+Updated Energy: -10.87483
+Optimization Step: 11
+Updated Coordiantes:
+3 atoms
+79     -7.73783   0.00000   7.73532
+79    -10.51384   0.00000   6.74890
+79     -6.74833   0.00000  10.51578
+
+Updated Energy: -10.88108
+Optimization Step: 12
+Updated Coordiantes:
+3 atoms
+79     -7.73386   0.00000   7.73692
+79    -10.51329   0.00000   6.75197
+79     -6.75285   0.00000  10.51111
+
+Updated Energy: -10.88297
+Optimization Step: 13
+Updated Coordiantes:
+3 atoms
+79     -7.73442   0.00000   7.73175
+79    -10.51095   0.00000   6.75524
+79     -6.75463   0.00000  10.51301
+
+Updated Energy: -10.88455
+Optimization Step: 14
+Updated Coordiantes:
+3 atoms
+79     -7.72906   0.00000   7.73219
+79    -10.51255   0.00000   6.75750
+79     -6.75839   0.00000  10.51031
+
+Updated Energy: -10.88615
+Optimization Step: 15
+Updated Coordiantes:
+3 atoms
+79     -7.72980   0.00000   7.72708
+79    -10.50989   0.00000   6.76093
+79     -6.76031   0.00000  10.51199
+
+Updated Energy: -10.88779
+Optimization Step: 16
+Updated Coordiantes:
+3 atoms
+79     -7.72435   0.00000   7.72754
+79    -10.51149   0.00000   6.76325
+79     -6.76416   0.00000  10.50921
+
+Updated Energy: -10.88945
+Optimization Step: 17
+Updated Coordiantes:
+3 atoms
+79     -7.72512   0.00000   7.72234
+79    -10.50876   0.00000   6.76675
+79     -6.76612   0.00000  10.51091
+
+Updated Energy: -10.89115
+Optimization Step: 18
+Updated Coordiantes:
+3 atoms
+79     -7.71957   0.00000   7.72282
+79    -10.51039   0.00000   6.76913
+79     -6.77005   0.00000  10.50805
+
+Updated Energy: -10.89288
+Optimization Step: 19
+Updated Coordiantes:
+3 atoms
+79     -7.72036   0.00000   7.71753
+79    -10.50758   0.00000   6.77270
+79     -6.77207   0.00000  10.50978
+
+Updated Energy: -10.89465
+Optimization Step: 20
+Updated Coordiantes:
+3 atoms
+79     -7.71470   0.00000   7.71802
+79    -10.50923   0.00000   6.77515
+79     -6.77607   0.00000  10.50683
+
+Updated Energy: -10.89645
+Optimization Step: 21
+Updated Coordiantes:
+3 atoms
+79     -7.71552   0.00000   7.71263
+79    -10.50634   0.00000   6.77878
+79     -6.77815   0.00000  10.50859
+
+Updated Energy: -10.89829
+Optimization Step: 22
+Updated Coordiantes:
+3 atoms
+79     -7.70975   0.00000   7.71314
+79    -10.50801   0.00000   6.78130
+79     -6.78223   0.00000  10.50556
+
+Updated Energy: -10.90017
+Optimization Step: 23
+Updated Coordiantes:
+3 atoms
+79     -7.71059   0.00000   7.70764
+79    -10.50504   0.00000   6.78501
+79     -6.78437   0.00000  10.50735
+
+Updated Energy: -10.90208
+Optimization Step: 24
+Updated Coordiantes:
+3 atoms
+79     -7.70472   0.00000   7.70818
+79    -10.50674   0.00000   6.78760
+79     -6.78854   0.00000  10.50423
+
+Updated Energy: -10.90404
+Optimization Step: 25
+Updated Coordiantes:
+3 atoms
+79     -7.70558   0.00000   7.70257
+79    -10.50368   0.00000   6.79139
+79     -6.79074   0.00000  10.50604
+
+Updated Energy: -10.90603
+Optimization Step: 26
+Updated Coordiantes:
+3 atoms
+79     -7.69959   0.00000   7.70313
+79    -10.50541   0.00000   6.79405
+79     -6.79500   0.00000  10.50283
+
+Updated Energy: -10.90807
+Optimization Step: 27
+Updated Coordiantes:
+3 atoms
+79     -7.70048   0.00000   7.69740
+79    -10.50225   0.00000   6.79792
+79     -6.79726   0.00000  10.50468
+
+Updated Energy: -10.91016
+Optimization Step: 28
+Updated Coordiantes:
+3 atoms
+79     -7.69437   0.00000   7.69798
+79    -10.50401   0.00000   6.80066
+79     -6.80162   0.00000  10.50136
+
+Updated Energy: -10.91228
+Optimization Step: 29
+Updated Coordiantes:
+3 atoms
+79     -7.69529   0.00000   7.69214
+79    -10.50076   0.00000   6.80462
+79     -6.80395   0.00000  10.50324
+
+Updated Energy: -10.91446
+Optimization Step: 30
+Updated Coordiantes:
+3 atoms
+79     -7.68905   0.00000   7.69275
+79    -10.50254   0.00000   6.80743
+79     -6.80841   0.00000  10.49982
+
+Updated Energy: -10.91668
+Optimization Step: 31
+Updated Coordiantes:
+3 atoms
+79     -7.69000   0.00000   7.68678
+79    -10.49919   0.00000   6.81148
+79     -6.81081   0.00000  10.50174
+
+Updated Energy: -10.91896
+Optimization Step: 32
+Updated Coordiantes:
+3 atoms
+79     -7.68362   0.00000   7.68741
+79    -10.50100   0.00000   6.81438
+79     -6.81537   0.00000  10.49821
+
+Updated Energy: -10.92129
+Optimization Step: 33
+Updated Coordiantes:
+3 atoms
+79     -7.68461   0.00000   7.68131
+79    -10.49754   0.00000   6.81853
+79     -6.81785   0.00000  10.50016
+
+Updated Energy: -10.92367
+Optimization Step: 34
+Updated Coordiantes:
+3 atoms
+79     -7.67809   0.00000   7.68197
+79    -10.49939   0.00000   6.82152
+79     -6.82252   0.00000  10.49651
+
+Updated Energy: -10.92611
+Optimization Step: 35
+Updated Coordiantes:
+3 atoms
+79     -7.67911   0.00000   7.67574
+79    -10.49581   0.00000   6.82576
+79     -6.82507   0.00000  10.49850
+
+Updated Energy: -10.92860
+Optimization Step: 36
+Updated Coordiantes:
+3 atoms
+79     -7.67245   0.00000   7.67642
+79    -10.49769   0.00000   6.82885
+79     -6.82986   0.00000  10.49473
+
+Updated Energy: -10.93116
+Optimization Step: 37
+Updated Coordiantes:
+3 atoms
+79     -7.67351   0.00000   7.67004
+79    -10.49400   0.00000   6.83319
+79     -6.83249   0.00000  10.49676
+
+Updated Energy: -10.93378
+Optimization Step: 38
+Updated Coordiantes:
+3 atoms
+79     -7.66669   0.00000   7.67076
+79    -10.49591   0.00000   6.83638
+79     -6.83740   0.00000  10.49286
+
+Updated Energy: -10.93646
+Optimization Step: 39
+Updated Coordiantes:
+3 atoms
+79     -7.66779   0.00000   7.66423
+79    -10.49209   0.00000   6.84083
+79     -6.84013   0.00000  10.49494
+
+Updated Energy: -10.93922
+Optimization Step: 40
+Updated Coordiantes:
+3 atoms
+79     -7.66080   0.00000   7.66498
+79    -10.49404   0.00000   6.84412
+79     -6.84516   0.00000  10.49089
+
+Updated Energy: -10.94204
+Optimization Step: 41
+Updated Coordiantes:
+3 atoms
+79     -7.66194   0.00000   7.65829
+79    -10.49008   0.00000   6.84869
+79     -6.84798   0.00000  10.49301
+
+Updated Energy: -10.94494
+Optimization Step: 42
+Updated Coordiantes:
+3 atoms
+79     -7.65479   0.00000   7.65908
+79    -10.49207   0.00000   6.85210
+79     -6.85315   0.00000  10.48882
+
+Updated Energy: -10.94791
+Optimization Step: 43
+Updated Coordiantes:
+3 atoms
+79     -7.65597   0.00000   7.65222
+79    -10.48797   0.00000   6.85679
+79     -6.85607   0.00000  10.49099
+
+Updated Energy: -10.95096
+Optimization Step: 44
+Updated Coordiantes:
+3 atoms
+79     -7.64864   0.00000   7.65305
+79    -10.48999   0.00000   6.86031
+79     -6.86137   0.00000  10.48664
+
+Updated Energy: -10.95410
+Optimization Step: 45
+Updated Coordiantes:
+3 atoms
+79     -7.64986   0.00000   7.64601
+79    -10.48574   0.00000   6.86513
+79     -6.86440   0.00000  10.48886
+
+Updated Energy: -10.95732
+Optimization Step: 46
+Updated Coordiantes:
+3 atoms
+79     -7.64234   0.00000   7.64687
+79    -10.48781   0.00000   6.86878
+79     -6.86986   0.00000  10.48435
+
+Updated Energy: -10.96063
+Optimization Step: 47
+Updated Coordiantes:
+3 atoms
+79     -7.64361   0.00000   7.63965
+79    -10.48339   0.00000   6.87373
+79     -6.87299   0.00000  10.48662
+
+Updated Energy: -10.96403
+Optimization Step: 48
+Updated Coordiantes:
+3 atoms
+79     -7.63589   0.00000   7.64056
+79    -10.48550   0.00000   6.87752
+79     -6.87861   0.00000  10.48193
+
+Updated Energy: -10.96754
+Optimization Step: 49
+Updated Coordiantes:
+3 atoms
+79     -7.63722   0.00000   7.63314
+79    -10.48092   0.00000   6.88261
+79     -6.88187   0.00000  10.48425
+
+Updated Energy: -10.97114
+Optimization Step: 50
+Updated Coordiantes:
+3 atoms
+79     -7.62928   0.00000   7.63409
+79    -10.48308   0.00000   6.88654
+79     -6.88765   0.00000  10.47937
+
+Updated Energy: -10.97486
+Optimization Step: 51
+Updated Coordiantes:
+3 atoms
+79     -7.63066   0.00000   7.62645
+79    -10.47830   0.00000   6.89179
+79     -6.89104   0.00000  10.48175
+
+Updated Energy: -10.97869
+Optimization Step: 52
+Updated Coordiantes:
+3 atoms
+79     -7.62249   0.00000   7.62746
+79    -10.48051   0.00000   6.89588
+79     -6.89700   0.00000  10.47667
+
+Updated Energy: -10.98263
+Optimization Step: 53
+Updated Coordiantes:
+3 atoms
+79     -7.62394   0.00000   7.61960
+79    -10.47554   0.00000   6.90129
+79     -6.90052   0.00000  10.47912
+
+Updated Energy: -10.98670
+Optimization Step: 54
+Updated Coordiantes:
+3 atoms
+79     -7.61553   0.00000   7.62065
+79    -10.47780   0.00000   6.90554
+79     -6.90668   0.00000  10.47381
+
+Updated Energy: -10.99090
+Optimization Step: 55
+Updated Coordiantes:
+3 atoms
+79     -7.61704   0.00000   7.61255
+79    -10.47261   0.00000   6.91112
+79     -6.91035   0.00000  10.47633
+
+Updated Energy: -10.99524
+Optimization Step: 56
+Updated Coordiantes:
+3 atoms
+79     -7.60837   0.00000   7.61367
+79    -10.47493   0.00000   6.91555
+79     -6.91670   0.00000  10.47078
+
+Updated Energy: -10.99972
+Optimization Step: 57
+Updated Coordiantes:
+3 atoms
+79     -7.60995   0.00000   7.60531
+79    -10.46951   0.00000   6.92132
+79     -6.92054   0.00000  10.47337
+
+Updated Energy: -11.00436
+Optimization Step: 58
+Updated Coordiantes:
+3 atoms
+79     -7.60100   0.00000   7.60648
+79    -10.47189   0.00000   6.92595
+79     -6.92711   0.00000  10.46757
+
+Updated Energy: -11.00915
+Optimization Step: 59
+Updated Coordiantes:
+3 atoms
+79     -7.60266   0.00000   7.59785
+79    -10.46622   0.00000   6.93191
+79     -6.93112   0.00000  10.47024
+
+Updated Energy: -11.01411
+Optimization Step: 60
+Updated Coordiantes:
+3 atoms
+79     -7.59341   0.00000   7.59909
+79    -10.46866   0.00000   6.93675
+79     -6.93793   0.00000  10.46416
+
+Updated Energy: -11.01926
+Optimization Step: 61
+Updated Coordiantes:
+3 atoms
+79     -7.59515   0.00000   7.59016
+79    -10.46273   0.00000   6.94292
+79     -6.94212   0.00000  10.46691
+
+Updated Energy: -11.02459
+Optimization Step: 62
+Updated Coordiantes:
+3 atoms
+79     -7.58558   0.00000   7.59148
+79    -10.46524   0.00000   6.94799
+79     -6.94919   0.00000  10.46053
+
+Updated Energy: -11.03012
+Optimization Step: 63
+Updated Coordiantes:
+3 atoms
+79     -7.58741   0.00000   7.58223
+79    -10.45901   0.00000   6.95439
+79     -6.95359   0.00000  10.46338
+
+Updated Energy: -11.03586
+Optimization Step: 64
+Updated Coordiantes:
+3 atoms
+79     -7.57749   0.00000   7.58363
+79    -10.46159   0.00000   6.95971
+79     -6.96092   0.00000  10.45666
+
+Updated Energy: -11.04182
+Optimization Step: 65
+Updated Coordiantes:
+3 atoms
+79     -7.57942   0.00000   7.57403
+79    -10.45503   0.00000   6.96636
+79     -6.96555   0.00000  10.45961
+
+Updated Energy: -11.04803
+Optimization Step: 66
+Updated Coordiantes:
+3 atoms
+79     -7.56913   0.00000   7.57552
+79    -10.45770   0.00000   6.97194
+79     -6.97318   0.00000  10.45253
+
+Updated Energy: -11.05449
+Optimization Step: 67
+Updated Coordiantes:
+3 atoms
+79     -7.57116   0.00000   7.56555
+79    -10.45079   0.00000   6.97887
+79     -6.97805   0.00000  10.45559
+
+Updated Energy: -11.06122
+Optimization Step: 68
+Updated Coordiantes:
+3 atoms
+79     -7.56046   0.00000   7.56714
+79    -10.45354   0.00000   6.98475
+79     -6.98600   0.00000  10.44811
+
+Updated Energy: -11.06824
+Optimization Step: 69
+Updated Coordiantes:
+3 atoms
+79     -7.56261   0.00000   7.55675
+79    -10.44625   0.00000   6.99197
+79     -6.99114   0.00000  10.45129
+
+Updated Energy: -11.07557
+Optimization Step: 70
+Updated Coordiantes:
+3 atoms
+79     -7.55146   0.00000   7.55845
+79    -10.44909   0.00000   6.99818
+79     -6.99945   0.00000  10.44337
+
+Updated Energy: -11.08324
+Optimization Step: 71
+Updated Coordiantes:
+3 atoms
+79     -7.55375   0.00000   7.54760
+79    -10.44136   0.00000   7.00572
+79     -7.00489   0.00000  10.44667
+
+Updated Energy: -11.09125
+Optimization Step: 72
+Updated Coordiantes:
+3 atoms
+79     -7.54210   0.00000   7.54943
+79    -10.44431   0.00000   7.01230
+79     -7.01359   0.00000  10.43827
+
+Updated Energy: -11.09966
+Optimization Step: 73
+Updated Coordiantes:
+3 atoms
+79     -7.54453   0.00000   7.53809
+79    -10.43610   0.00000   7.02020
+79     -7.01936   0.00000  10.44172
+
+Updated Energy: -11.10847
+Optimization Step: 74
+Updated Coordiantes:
+3 atoms
+79     -7.53235   0.00000   7.54005
+79    -10.43916   0.00000   7.02719
+79     -7.02849   0.00000  10.43276
+
+Updated Energy: -11.11773
+Optimization Step: 75
+Updated Coordiantes:
+3 atoms
+79     -7.53494   0.00000   7.52815
+79    -10.43042   0.00000   7.03547
+79     -7.03464   0.00000  10.43637
+
+Updated Energy: -11.12747
+Optimization Step: 76
+Updated Coordiantes:
+3 atoms
+79     -7.52216   0.00000   7.53028
+79    -10.43360   0.00000   7.04293
+79     -7.04424   0.00000  10.42680
+
+Updated Energy: -11.13773
+Optimization Step: 77
+Updated Coordiantes:
+3 atoms
+79     -7.52493   0.00000   7.51776
+79    -10.42426   0.00000   7.05165
+79     -7.05081   0.00000  10.43059
+
+Updated Energy: -11.14856
+Optimization Step: 78
+Updated Coordiantes:
+3 atoms
+79     -7.51147   0.00000   7.52007
+79    -10.42758   0.00000   7.05962
+79     -7.06095   0.00000  10.42031
+
+Updated Energy: -11.16001
+Optimization Step: 79
+Updated Coordiantes:
+3 atoms
+79     -7.51445   0.00000   7.50686
+79    -10.41756   0.00000   7.06883
+79     -7.06799   0.00000  10.42432
+
+Updated Energy: -11.17213
+Optimization Step: 80
+Updated Coordiantes:
+3 atoms
+79     -7.50024   0.00000   7.50937
+79    -10.42102   0.00000   7.07740
+79     -7.07874   0.00000  10.41324
+
+Updated Energy: -11.18501
+Optimization Step: 81
+Updated Coordiantes:
+3 atoms
+79     -7.50345   0.00000   7.49537
+79    -10.41022   0.00000   7.08715
+79     -7.08633   0.00000  10.41747
+
+Updated Energy: -11.19868
+Optimization Step: 82
+Updated Coordiantes:
+3 atoms
+79     -7.48838   0.00000   7.49812
+79    -10.41386   0.00000   7.09641
+79     -7.09776   0.00000  10.40547
+
+Updated Energy: -11.21328
+Optimization Step: 83
+Updated Coordiantes:
+3 atoms
+79     -7.49186   0.00000   7.48323
+79    -10.40215   0.00000   7.10679
+79     -7.10599   0.00000  10.40998
+
+Updated Energy: -11.22885
+Optimization Step: 84
+Updated Coordiantes:
+3 atoms
+79     -7.47582   0.00000   7.48626
+79    -10.40598   0.00000   7.11685
+79     -7.11820   0.00000  10.39689
+
+Updated Energy: -11.24555
+Optimization Step: 85
+Updated Coordiantes:
+3 atoms
+79     -7.47961   0.00000   7.47033
+79    -10.39323   0.00000   7.12795
+79     -7.12717   0.00000  10.40172
+
+Updated Energy: -11.26346
+Optimization Step: 86
+Updated Coordiantes:
+3 atoms
+79     -7.46244   0.00000   7.47370
+79    -10.39727   0.00000   7.13895
+79     -7.14029   0.00000  10.38735
+
+Updated Energy: -11.28280
+Optimization Step: 87
+Updated Coordiantes:
+3 atoms
+79     -7.46658   0.00000   7.45655
+79    -10.38328   0.00000   7.15089
+79     -7.15014   0.00000  10.39256
+
+Updated Energy: -11.30366
+Optimization Step: 88
+Updated Coordiantes:
+3 atoms
+79     -7.44810   0.00000   7.46033
+79    -10.38757   0.00000   7.16301
+79     -7.16434   0.00000  10.37666
+
+Updated Energy: -11.32635
+Optimization Step: 89
+Updated Coordiantes:
+3 atoms
+79     -7.45266   0.00000   7.44173
+79    -10.37209   0.00000   7.17594
+79     -7.17525   0.00000  10.38233
+
+Updated Energy: -11.35100
+Optimization Step: 90
+Updated Coordiantes:
+3 atoms
+79     -7.43262   0.00000   7.44603
+79    -10.37666   0.00000   7.18942
+79     -7.19072   0.00000  10.36455
+
+Updated Energy: -11.37806
+Optimization Step: 91
+Updated Coordiantes:
+3 atoms
+79     -7.43769   0.00000   7.42566
+79    -10.35938   0.00000   7.20354
+79     -7.20293   0.00000  10.37079
+
+Updated Energy: -11.40770
+Optimization Step: 92
+Updated Coordiantes:
+3 atoms
+79     -7.41577   0.00000   7.43061
+79    -10.36427   0.00000   7.21872
+79     -7.21996   0.00000  10.35067
+
+Updated Energy: -11.44062
+Optimization Step: 93
+Updated Coordiantes:
+3 atoms
+79     -7.42145   0.00000   7.40807
+79    -10.34475   0.00000   7.23429
+79     -7.23379   0.00000  10.35764
+
+Updated Energy: -11.47704
+Optimization Step: 94
+Updated Coordiantes:
+3 atoms
+79     -7.39723   0.00000   7.41387
+79    -10.35002   0.00000   7.25163
+79     -7.25276   0.00000  10.33451
+
+Updated Energy: -11.51808
+Optimization Step: 95
+Updated Coordiantes:
+3 atoms
+79     -7.40365   0.00000   7.38855
+79    -10.32765   0.00000   7.26901
+79     -7.26870   0.00000  10.34245
+
+Updated Energy: -11.56405
+Optimization Step: 96
+Updated Coordiantes:
+3 atoms
+79     -7.37654   0.00000   7.39550
+79    -10.33332   0.00000   7.28918
+79     -7.29013   0.00000  10.31532
+
+Updated Energy: -11.61686
+Optimization Step: 97
+Updated Coordiantes:
+3 atoms
+79     -7.38386   0.00000   7.36650
+79    -10.30725   0.00000   7.30890
+79     -7.30888   0.00000  10.32460
+
+Updated Energy: -11.67692
+Optimization Step: 98
+Updated Coordiantes:
+3 atoms
+79     -7.35307   0.00000   7.37513
+79    -10.31333   0.00000   7.33295
+79     -7.33360   0.00000  10.29191
+
+Updated Energy: -11.74781
+Optimization Step: 99
+Updated Coordiantes:
+3 atoms
+79     -7.36145   0.00000   7.34096
+79    -10.28226   0.00000   7.35583
+79     -7.35629   0.00000  10.30321
+
+Updated Energy: -11.82994
+Optimization Step: 100
+Updated Coordiantes:
+3 atoms
+79     -7.32587   0.00000   7.35223
+79    -10.28859   0.00000   7.38545
+79     -7.38554   0.00000  10.26232
+
+Updated Energy: -11.93077
+Optimization Step: 101
+Updated Coordiantes:
+3 atoms
+79     -7.33532   0.00000   7.31028
+79    -10.25056   0.00000   7.41280
+79     -7.41412   0.00000  10.27692
+
+Updated Energy: -12.05018
+Optimization Step: 102
+Updated Coordiantes:
+3 atoms
+79     -7.29361   0.00000   7.32609
+79    -10.25642   0.00000   7.45095
+79     -7.44997   0.00000  10.22296
+
+Updated Energy: -12.20619
+Optimization Step: 103
+Updated Coordiantes:
+3 atoms
+79     -7.30336   0.00000   7.27120
+79    -10.20852   0.00000   7.48514
+79     -7.48812   0.00000  10.24365
+
+Updated Energy: -12.39471
+Optimization Step: 104
+Updated Coordiantes:
+3 atoms
+79     -7.25520   0.00000   7.29588
+79    -10.21088   0.00000   7.53705
+79     -7.53392   0.00000  10.16707
+
+Updated Energy: -12.66841
+Optimization Step: 105
+Updated Coordiantes:
+3 atoms
+79     -7.26051   0.00000   7.21729
+79    -10.15052   0.00000   7.58246
+79     -7.58896   0.00000  10.20025
+
+Updated Energy: -12.99542
+Optimization Step: 106
+Updated Coordiantes:
+3 atoms
+79     -7.21531   0.00000   7.25966
+79    -10.13664   0.00000   7.65472
+79     -7.64805   0.00000  10.08562
+
+Updated Energy: -13.55502
+Optimization Step: 107
+Updated Coordiantes:
+3 atoms
+79     -7.19625   0.00000   7.15185
+79    -10.08031   0.00000   7.71265
+79     -7.72344   0.00000  10.13550
+
+Updated Energy: -14.11078
+Optimization Step: 108
+Updated Coordiantes:
+3 atoms
+79     -7.19355   0.00000   7.20476
+79    -10.02343   0.00000   7.78638
+79     -7.78302   0.00000  10.00887
+
+Updated Energy: -14.99415
+Optimization Step: 109
+Updated Coordiantes:
+3 atoms
+79     -7.13846   0.00000   7.13316
+79    -10.02539   0.00000   7.83455
+79     -7.83615   0.00000  10.03229
+
+Updated Energy: -15.48785
+Optimization Step: 110
+Updated Coordiantes:
+3 atoms
+79     -7.15182   0.00000   7.15023
+79     -9.98104   0.00000   7.86682
+79     -7.86715   0.00000   9.98295
+
+Updated Energy: -15.79293
+Optimization Step: 111
+Updated Coordiantes:
+3 atoms
+79     -7.12883   0.00000   7.12870
+79     -9.98673   0.00000   7.88463
+79     -7.88443   0.00000   9.98667
+
+Updated Energy: -15.85887
+Optimization Step: 112
+Updated Coordiantes:
+3 atoms
+79     -7.13128   0.00000   7.13114
+79     -9.97915   0.00000   7.88976
+79     -7.88957   0.00000   9.97909
+
+Updated Energy: -15.86902
+Optimization Step: 113
+Updated Coordiantes:
+3 atoms
+79     -7.12866   0.00000   7.12852
+79     -9.97970   0.00000   7.89183
+79     -7.89164   0.00000   9.97965
+
+Updated Energy: -15.86992
+Optimization Step: 114
+Updated Coordiantes:
+3 atoms
+79     -7.12887   0.00000   7.12873
+79     -9.97907   0.00000   7.89225
+79     -7.89206   0.00000   9.97902
+
+Updated Energy: -15.86999
+Optimization Step: 115
+Updated Coordiantes:
+3 atoms
+79     -7.12866   0.00000   7.12852
+79     -9.97911   0.00000   7.89242
+79     -7.89222   0.00000   9.97906
+
+Updated Energy: -15.87000
+Optimization finished in 116 steps
+
+
+Final Energy:-15.87000
+Final Gradient: 
+-0.00180  0.00557 -0.00378
+-0.00000 -0.00000 -0.00000
+ 0.00180  0.00377 -0.00557
+Final Coordinates:
+3 atoms
+79     -7.12866   0.00000   7.12852
+79     -9.97911   0.00000   7.89242
+79     -7.89222   0.00000   9.97906
+
+Final atom-atom distances:
+2.95070
+2.95070
+2.95070

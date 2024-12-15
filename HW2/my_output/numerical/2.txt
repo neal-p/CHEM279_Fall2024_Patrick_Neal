@@ -1,0 +1,3 @@
+read gaussian centered at 0 with alpha=1 and l=0
+read gaussian centered at 0 with alpha=1 and l=1
+1d numerical overlap integral between Gaussian functions is -1.92439e-17

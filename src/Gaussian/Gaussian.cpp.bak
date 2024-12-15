@@ -1,0 +1,394 @@
+#include <vector>
+#include <string>
+#include <sstream>
+#include <fstream>
+#include <unordered_map>
+#include <iostream>
+
+#include "../../external/eigen-3.4.0/Eigen/Dense"
+using namespace Eigen;
+
+
+
+int factorial(int x) {
+
+  x = abs(x);
+
+  int result = 1;
+
+  for (int i=2; i <= x; i++) {
+    result *= i;
+  }
+
+  return result;
+}
+
+int double_factorial(int x) {
+
+  x = abs(x);
+  int result = 1;
+
+  if (x % 2 == 0) {
+    for (int i=2; i <= x; i+=2) {
+      result *= i;
+    }
+    
+  } else {
+    for (int i=3; i <= x; i+=2) {
+      result *= i;
+    }
+  }
+
+  return result;
+}
+
+double double_factorial(double x) {
+  return (double)double_factorial((int)x);
+}
+
+
+int binom(int m, int n) {
+  return factorial(m) / (factorial(n) * factorial(m - n));
+}
+
+double binom(double m, double n) {
+  return (double)binom((int)m, (int)n);
+}
+
+
+
+
+
+
+class _Primative {
+
+    public:
+        double coef, alpha;
+        _Primative(double coef, double alpha) : coef(coef), alpha(alpha) {};
+};
+
+
+ArrayXXd ShellOverlap(_Primative& A, _Primative& B, Array3d A_center, Array3d B_center, std::vector<Array3i> A_lmns, std::vector<Array3i> B_lmns);
+
+
+class ContractedShell {
+
+    public:
+        int L;
+        std::vector<Array3i> lmns;
+        Array3d center;
+        std::vector<_Primative> primatives;
+        std::vector<double> Ns;
+
+
+        void _get_angular_functions() {
+
+            for (int l=this->L; l >= 0; l--) {
+                for (int m=this->L; m >= 0; m--) {
+                    for (int n=this->L; n >= 0; n--) {
+
+                        if (l+m+n == this->L) {
+                            Array3i lmn = {l, m, n};
+                            this->lmns.push_back(lmn);
+                        }
+                    }
+                }
+            }
+        }
+
+        ContractedShell(int L) : L(L) {
+            this->_get_angular_functions();
+        }
+
+        ContractedShell(int L, Array3d& center) : L(L) {
+            this->center = center;
+            this->_get_angular_functions();
+        }
+
+        ContractedShell(int L, double x0, double y0, double z0) : L(L) {
+            this->center = {x0, y0, z0};
+            this->_get_angular_functions();
+        }
+
+        void AddPrimative(double coef, double alpha) {
+            this->primatives.emplace_back(coef, alpha);
+
+            ArrayXXd primative_overlap = ShellOverlap(this->primatives.back(), this->primatives.back(), this->center, this->center, this->lmns, this->lmns);
+            double N = 1.0 / (sqrt(primative_overlap(0, 0)));
+
+            this->Ns.push_back(N);
+
+        }
+
+        void Print() {
+
+            std::cout << "Contracted Shell:" << std::endl;
+            std::cout << "    Center: " << this->center[0] << ", " <<
+this->center[1] << ", " << this->center[2] << std::endl;
+            std::cout << "    Angular momentum: " << this->L << std::endl;
+            std::cout << "    Angular momentum terms:" << std::endl;
+            
+            for (Array3i lmn : this->lmns) {
+                std::cout << "        l=" << lmn[0] << ", m=" << lmn[1] <<
+",n=" << lmn[2] << std::endl;
+            }
+
+            std::cout << "    Primatives:" << std::endl;
+           
+            int idx=0;
+            for (_Primative p : this->primatives) {
+                std::cout << "        coef=" << p.coef << ", alpha=" << p.alpha << ", N=" << this->Ns[idx] << std::endl;
+                idx++;
+            }
+
+        }
+
+};
+
+
+typedef std::unordered_map<std::string, std::vector<ContractedShell>> BasisSet;
+
+BasisSet read_basis_set(std::string file) {
+    BasisSet bs;
+
+    std::ifstream infile(file);
+    if (!infile) {
+        std::cout << "Cant read" << std::endl;
+        return bs;
+    }
+
+    std::string line;
+    std::string element;
+    int num_primatives;
+    bool element_block_start = true;
+
+    while (std::getline(infile, line)) {
+
+        // Skip empty or comment lines
+        if (line.empty() || line.substr(0, 1) == "!") {
+            continue;
+
+        // If next line is '****' then start a new element
+        } else if ( line.substr(0, 4) == "****") {
+            element_block_start = true;
+            continue;
+        }
+
+        if (element_block_start) {
+
+            // Element block starts with Element <int>
+            std::istringstream iss(line);
+            int number_idk_what_means;
+            iss >> element >> number_idk_what_means;
+            element_block_start = false;
+            continue;
+        }
+
+        // Not empty, comment, new element indicator
+        // Not element start block
+        
+        // So next line should be start of orbital
+        // definitions
+        // Next line is <type> <number> <scale>
+
+        std::istringstream iss(line);
+        std::string type;
+        double scale;
+        iss >> type >> num_primatives >> scale;
+
+        // Handle each type separately
+        if (type == "S") {
+
+            // S orbital - 0 angular momentum
+            ContractedShell CS(0);
+
+            // Get line for each primative
+            for (int i=0; i < num_primatives; i++) {
+                std::getline(infile, line);
+                std::istringstream line_stream(line);
+
+                double alpha, coef;
+
+                line_stream >> alpha >> coef;
+                CS.AddPrimative(coef, alpha);
+            }
+
+            bs[element].push_back(CS);
+
+        } else if (type == "P") {
+
+            // P orbital - 1 angular momentum
+            ContractedShell CS(1);
+
+            // Get line for each primative
+            for (int i=0; i < num_primatives; i++) {
+                std::getline(infile, line);
+                std::istringstream line_stream(line);
+
+                double alpha, coef;
+
+                line_stream >> alpha >> coef;
+                CS.AddPrimative(coef, alpha);
+            }
+
+            bs[element].push_back(CS);
+
+        } else if (type == "SP") {
+
+            // S orbital - 0 angular momentum
+            ContractedShell S_CS(0);
+
+            // P orbital - 1 angular momentum
+            ContractedShell P_CS(1);
+
+            // Get line for each primative
+            for (int i=0; i < num_primatives; i++) {
+                std::getline(infile, line);
+                std::istringstream line_stream(line);
+
+                double alpha, S_coef, P_coef;
+
+                std::cout << "debugging: SP -> line=" << line << std::endl;
+
+                line_stream >> alpha >> S_coef >> P_coef;
+
+                std::cout << "debugging: SP -> read S_coef=" << S_coef <<
+" read P_coef=" << P_coef << std::endl;
+                S_CS.AddPrimative(S_coef, alpha);
+                P_CS.AddPrimative(P_coef, alpha);
+            }
+
+            bs[element].push_back(S_CS);
+            bs[element].push_back(P_CS);
+
+        } else {
+            std::cout << "type " << type << " not implemented" << std::endl;
+            // Get line for each primative
+            for (int i=0; i < num_primatives; i++) {
+                std::getline(infile, line);
+            }
+        }
+    }
+
+    return bs;
+}
+
+
+double __inner_overlap(double alpha, double beta, double Ra, double Rb, double Rp, int la, int lb) {
+
+    double sum = 0.0;
+
+    for (int i=0; i <= la; i++) {
+      for (int j=0; j <= lb; j++) {
+
+          if ((i + j) % 2 == 0) {
+
+            int binom_A = binom(la, i);
+            int binom_B = binom(lb, j);
+            sum += binom_A * binom_B * double_factorial(i + j -1) * pow(Rp - Ra, la-i) * pow(Rp - Rb, lb-j) / pow(2.0 * (alpha + beta), (i+j) / 2.0);
+          }
+        }
+      }
+
+  return sum;
+}
+
+
+ArrayXXd ShellOverlap(_Primative& A, _Primative& B, Array3d A_center, Array3d B_center, std::vector<Array3i> A_lmns, std::vector<Array3i> B_lmns) {
+
+    ArrayXXd overlap(A_lmns.size(), B_lmns.size());
+
+    // Exponential terms
+    Array3d new_xyz = (A.alpha * A_center + B.alpha * B_center) / (A.alpha + B.alpha);
+    double root_term = sqrt(M_PI / (A.alpha + B.alpha));
+    Array3d expo_term = exp(-(A.alpha * B.alpha / (A.alpha + B.alpha)) * (A_center - B_center).pow(2.0));
+
+    // Angular momentum terms
+    int i=0;
+    for (Array3i A_lmn : A_lmns) {
+
+        int j=0;
+        for (Array3i B_lmn : B_lmns) {
+
+            double x_overlap = __inner_overlap(A.alpha, B.alpha, A_center(0), B_center(0), new_xyz(0), A_lmn(0), B_lmn(0));
+            double y_overlap = __inner_overlap(A.alpha, B.alpha, A_center(1), B_center(1), new_xyz(1), A_lmn(1), B_lmn(1));
+            double z_overlap = __inner_overlap(A.alpha, B.alpha, A_center(2), B_center(2), new_xyz(2), A_lmn(2), B_lmn(2));
+
+			overlap(i,j) = x_overlap * y_overlap * z_overlap;
+
+		j++;
+        }
+
+	i++;
+    }
+
+	overlap *= expo_term.prod();
+    overlap *= pow(root_term, 3.0);
+
+	return overlap;
+}
+
+
+ArrayXXd ContractedShellOverlap(ContractedShell& A, ContractedShell& B) {
+
+    ArrayXXd overlap = ArrayXXd::Zero(A.lmns.size(), B.lmns.size());
+
+    // All A by All B
+    for (_Primative& A_p : A.primatives) {
+        for (_Primative& B_p : B.primatives) {
+
+            ArrayXXd inner_overlap = ShellOverlap(A_p, B_p, A.center, B.center, A.lmns, B.lmns);
+            std::cout << "inner overlap: " << inner_overlap << std::endl;
+            overlap += A_p.coef * B_p.coef * inner_overlap;
+        }
+    }
+
+    return overlap;
+}
+
+int main() {
+
+    BasisSet bs = read_basis_set("basis_set.txt");
+
+    for (auto kp : bs) {
+
+        std::string element = kp.first;
+        std::vector<ContractedShell> basis = kp.second;
+
+        std::cout << "ELEMENT: " << element << std::endl;
+
+        for (ContractedShell CS : basis) {
+            CS.Print();
+        }
+
+        std::cout << std::endl;
+    }
+
+    ContractedShell A = bs["C"][1];
+    ContractedShell B = bs["C"][0];
+
+    A.center = {0.0, 0.0, 0.0};
+    B.center = {1.3984, 0.0, 0.0};
+
+
+    std::cout << "DONE" << std::endl;
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

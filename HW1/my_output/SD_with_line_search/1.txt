@@ -1,0 +1,47 @@
+Input:
+2 atoms
+79      0.00000   0.00000   0.00000
+79      0.00000   0.00000   3.00000
+
+Initial Energy: -5.24317
+Initial Gradient:
+-0.00000 -0.00000
+-0.00000 -0.00000
+ 1.80352 -1.80352
+Optimization Step: 0
+Updated Coordiantes:
+2 atoms
+79      0.00000   0.00000   0.02450
+79      0.00000   0.00000   2.97550
+
+Updated Energy: -5.29000
+Optimization Step: 1
+Updated Coordiantes:
+2 atoms
+79      0.00000   0.00000   0.02450
+79      0.00000   0.00000   2.97550
+
+Updated Energy: -5.29000
+Optimization Step: 2
+Updated Coordiantes:
+2 atoms
+79      0.00000   0.00000   0.02450
+79      0.00000   0.00000   2.97550
+
+Updated Energy: -5.29000
+Optimization finished in 3 steps
+
+
+Final Energy:-5.29000
+Final Gradient: 
+-0.00000 -0.00000
+-0.00000 -0.00000
+-0.00000  0.00000
+Final Coordinates:
+2 atoms
+79      0.00000   0.00000   0.02450
+79      0.00000   0.00000   2.97550
+
+Final atom-atom distances:
+2.95100
+2.95100

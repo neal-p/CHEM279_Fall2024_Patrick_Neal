@@ -1,0 +1,9 @@
+Read in the following:
+Simulation: 
+    n_atoms=4, charge=1, n_AOs= 10, n_e-=13, n_valence_e=9
+    1       0.00000   0.00000   0.00000
+    6       2.07870   0.00000   0.00000
+    6       4.36530   0.00000   0.00000
+    1       6.44400   0.00000   0.00000
+
+Simulation must have EVEN number of electrons!! Exiting...
