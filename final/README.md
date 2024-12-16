@@ -17,7 +17,7 @@ Run the following commands to build the Python simulation Docker container, gene
 
 ```
 ./build_container.sh
-./generate_training_data.sh
-./train_model.sh
-./run_ML_simulation.sh
+./generate_training_data.sh --xyz water.xyz  
+./train_model.sh --data_dir water            
+./run_ML_simulation.sh --model_dir water_model --xyz water_no_eq.xyz
 ```
