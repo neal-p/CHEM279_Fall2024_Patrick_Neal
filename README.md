@@ -42,4 +42,7 @@ This homework required a big re-write to better handle the gaussians as actual A
  
  ### HW5
  This homework builds on HW4
- - `HW5/problem.cpp`: Computes the CNDO_2 energy and gradient 
+ - `HW5/problem.cpp`: Computes the CNDO_2 energy and gradient
+
+### final
+This directory contains all the work on the final project from Cameron Hu and I. The compilation instructions and ML workflow instructions are provided in the README, and the report contains all discussion and analysis!
