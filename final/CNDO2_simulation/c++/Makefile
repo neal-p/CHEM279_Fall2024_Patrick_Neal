@@ -14,19 +14,19 @@ LFLAGS = -L/usr/lib
 LIBS = -larmadillo
 
 # Source files
-SRCS = main.cpp CNDO.cpp util.cpp AO.cpp
+SRCS = md_simulation_cndo.cpp CNDO.cpp util.cpp AO.cpp
 
 # Object files, derived from SRCS
 OBJS = $(SRCS:.cpp=.o)
 
 # Executable name
-MAIN = HW5
+MAIN = md_simulation_cndo
 
 # Targets
 .PHONY: depend clean
 
 all:    $(MAIN)
-	@echo  Simple compiler named HW5 has been compiled
+	@echo  Simple compiler named md_simulation_cndo has been compiled
 
 $(MAIN): $(OBJS) 
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -o $(MAIN) $(OBJS) $(LFLAGS) $(LIBS)
