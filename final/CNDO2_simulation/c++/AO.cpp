@@ -373,3 +373,4 @@ void Molecule_basis::eval_nuc_1st(arma::mat &nuc_1st){
   }
   nuc_1st *= hartree_to_ev;
 }
+
