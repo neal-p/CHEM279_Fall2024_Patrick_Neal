@@ -55,9 +55,10 @@ echo "Using model from $model_dir with $xyz as starting geometry"
 
 
 IMAGE_TAG=chem279/final
+NAME="${xyz%.*}"
 
-mkdir -p "${model_dir}_ML_simulation"
-cp $xyz "${model_dir}_ML_simulation"
+mkdir -p "${NAME}_ML_simulation"
+cp $xyz "${NAME}_ML_simulation/$xyz"
 
-docker run --rm -v $(readlink -e utils):/workdir/utils -v $(readlink -e "${model_dir}_ML_simulation"):/workdir/results -v $(readlink -e $model_dir):/workdir/model_dir -v $(readlink -e model):/workdir/model $IMAGE_TAG python3 model/simulation.py "results/$xyz"
+docker run --rm -v $(readlink -e utils):/workdir/utils -v $(readlink -e ${NAME}_ML_simulation):/workdir/results -v $(readlink -e $model_dir):/workdir/model_dir -v $(readlink -e model):/workdir/model $IMAGE_TAG python3 model/simulation.py "results/$xyz"
 

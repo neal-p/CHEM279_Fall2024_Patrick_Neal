@@ -265,14 +265,19 @@ def write_multi_xyz(elements, coords, file):
                 f.write(f"{atom} {x} {y} {z}\n")
 
 
-def write_class_xyz(elements, coords, file):
+def write_class_xyz(elements, coords, file, input_in_angstrom=True):
 
     with open(file, "w") as f:
         f.write(f"{len(elements)} 0\n")
         
         for atom, (x, y, z) in zip(elements, coords):
             e = Element(atom)
-            f.write(f"{e.getNuc()} {x*1.8897} {y*1.8897} {z*1.8897}\n")
+
+            if input_in_angstrom:
+                f.write(f"{e.getNuc()} {x*1.8897} {y*1.8897} {z*1.8897}\n")
+            else:
+                f.write(f"{e.getNuc()} {x} {y} {z}\n")
+
 
 
 def read_class_xyz(file):
@@ -395,6 +400,27 @@ def read_our_output(file):
             grad = np.array((atom1, atom2, atom3)).astype(float)
 
     return energy, grad
+
+def read_our_output_string(content):
+
+    lines = content.split("\n")
+
+    for idx, line in enumerate(lines):
+        line = line.strip()
+
+        if line == "Energy":
+            energy = float(lines[idx+1].strip())
+
+        if line == "Gradient":
+            atom1 = lines[idx+1].strip().split()
+            atom2 = lines[idx+2].strip().split()
+            atom3 = lines[idx+3].strip().split()
+
+            grad = np.array((atom1, atom2, atom3)).astype(float)
+
+    return energy, grad
+
+
 
 
 
