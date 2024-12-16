@@ -25,8 +25,8 @@ MAIN = md_simulation_cndo
 # Targets
 .PHONY: depend clean
 
-all:    $(MAIN)
-	@echo  Simple compiler named md_simulation_cndo has been compiled
+all:    $(MAIN) run_simulation
+	@echo  Simple compiler named md_simulation_cndoz has been compiled
 
 $(MAIN): $(OBJS) 
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -o $(MAIN) $(OBJS) $(LFLAGS) $(LIBS)
@@ -40,5 +40,8 @@ clean:
 
 depend: $(SRCS)
 	makedepend $(INCLUDES) $^
+
+run_simulation: $(MAIN)
+	./$(MAIN) H2O.txt 1000
 
 # DO NOT DELETE
