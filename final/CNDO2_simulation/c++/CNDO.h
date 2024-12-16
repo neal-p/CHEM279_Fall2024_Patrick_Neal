@@ -37,6 +37,7 @@ class CNDO: public SCF{
         virtual arma::mat getPb() {return Pb;}
         virtual double getEnergy();
         arma::mat getGradient();
+        Molecule_basis &getMolecule() { return mol; }
 };
 
 
