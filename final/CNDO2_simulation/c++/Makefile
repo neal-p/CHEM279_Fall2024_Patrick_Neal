@@ -42,6 +42,6 @@ depend: $(SRCS)
 	makedepend $(INCLUDES) $^
 
 run_simulation: $(MAIN)
-	./$(MAIN) H2O.txt 1000
+	./$(MAIN) H2O.txt 5000
 
 # DO NOT DELETE
